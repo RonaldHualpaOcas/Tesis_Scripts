@@ -1,0 +1,17 @@
+Scripts Linux ---------------------------------------------------------------------------------------------------------------------
+
+Configuración de permisos (usuario root del FS)
+chmod usuario1 u + rw test1.txt
+
+Copia de archivos por Linux Samba
+
+cd home/usuario2/files
+cp archivo1 ../../smbguest/public
+------------- Con esto los archivos del usuario 2 se encontrarán en la carpeta compartida pública del servidor samba ----------
+------------- Luego el usuario 1 se debe conectar con el servicio ftp del servidor de archivos---------------------------------
+
+ftp 192.168.101.47
+username: smbguest
+password: ***********
+ftp > cd /public
+ftp > get archivo1
