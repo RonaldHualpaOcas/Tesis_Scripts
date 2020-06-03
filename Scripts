@@ -1,7 +1,7 @@
 Scripts Linux ---------------------------------------------------------------------------------------------------------------------
 
 Configuración de permisos (usuario root del FS)
-chmod usuario1 u + rw test1.txt
+chmod u+rw fileadmin/
 
 Copia de archivos por Linux Samba
 
